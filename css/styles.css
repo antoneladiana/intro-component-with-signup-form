@@ -169,6 +169,9 @@ body {
     font-size: 0.9em;
     margin-bottom: 5px;
 }
+.form__input.--error {
+    border: 2px solid var(--error-color);
+}
 .form__input:focus {
     outline: none;
     border: 1px solid var(--neutral-dark-color);

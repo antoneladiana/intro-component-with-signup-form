@@ -15,20 +15,24 @@ function validateForm() {
         if(formInput.value != "") {
             errorEmpty.classList.add("--hidden");
             errorIcon.classList.add("--hidden");
+            formInput.classList.remove("--error");
 
             // Validate email format
             if(formItems[i].classList.contains("--email")) {
                 if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+) *$/.test(formInput.value)) {
                     errorEmail.classList.add("--hidden");
                     errorIconEmail.classList.add("--hidden");
+                    formInput.classList.remove("--error");
                 } else {
                     errorEmail.classList.remove("--hidden");
                     errorIconEmail.classList.remove("--hidden");
+                    formInput.classList.add("--error");
                 }
             }
         } else {
             errorEmpty.classList.remove("--hidden");
             errorIcon.classList.remove("--hidden");
+            formInput.classList.add("--error");
         }
     }
     return(false)
