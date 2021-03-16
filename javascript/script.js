@@ -33,9 +33,13 @@ function validateForm() {
             errorEmpty.classList.remove("--hidden");
             errorIcon.classList.remove("--hidden");
             formInput.classList.add("--error");
+
+            if(formItems[i].classList.contains("--email")) {
+                errorEmail.classList.add("--hidden");
+            }
         }
     }
-    return(false)
+
 }
 
 let button = document.querySelector(".button.--form");
